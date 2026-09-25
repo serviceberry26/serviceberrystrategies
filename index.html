@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Serviceberry | Strategic community engagement for Utah companies</title>
+<meta name="description" content="Serviceberry designs and runs strategic community engagement programs for Utah companies. Stronger culture, lasting community relationships, and impact you can report in a proposal or a campaign.">
+
+<link rel="canonical" href="https://serviceberrystrategies.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://serviceberrystrategies.com/">
+<meta property="og:title" content="Serviceberry">
+<meta property="og:description" content="Serviceberry designs and runs strategic community engagement programs for Utah companies. Stronger culture, lasting community relationships, and impact you can report in a proposal or a campaign.">
+<meta property="og:site_name" content="Serviceberry">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- PLACEHOLDER favicon: swap for the real mark once the brand guide lands -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23EBE6DC'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%237C342A'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Instrument+Sans:ital,wght@0,400..600;1,400..600&display=swap">
+</head>
+<body>
+
+<style>
+/* ============================================================
+   SERVICEBERRY — landing page
+   Placeholder palette. Every colour is a token in :root,
+   so the real brand values drop straight in.
+   ============================================================ */
+
+:root {
+  --stone:      #EBE6DC;
+  --paper:      #F7F4EE;
+  --ink:        #221E1A;
+  --ink-soft:   #5E544B;
+  --ink-faint:  #8B8074;
+  --clay:       #7C342A;
+  --clay-deep:  #5E2620;
+  --rule:       #D6CCBB;
+  --rule-soft:  #E0D8CA;
+  --focus:      #7C342A;
+
+  --display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --sans: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+
+  --shell: 940px;
+  --gut: clamp(20px, 5vw, 40px);
+  --band: clamp(56px, 8vw, 92px);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --stone:      #1C1917;
+    --paper:      #232019;
+    --ink:        #EFEAE0;
+    --ink-soft:   #B6AC9F;
+    --ink-faint:  #8B8073;
+    --clay:       #D08A72;
+    --clay-deep:  #2C1410;
+    --rule:       #3A342C;
+    --rule-soft:  #2E2922;
+    --focus:      #D08A72;
+  }
+}
+
+:root[data-theme="dark"] {
+  --stone:      #1C1917;
+  --paper:      #232019;
+  --ink:        #EFEAE0;
+  --ink-soft:   #B6AC9F;
+  --ink-faint:  #8B8073;
+  --clay:       #D08A72;
+  --clay-deep:  #2C1410;
+  --rule:       #3A342C;
+  --rule-soft:  #2E2922;
+  --focus:      #D08A72;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--stone);
+  color: var(--ink-soft);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: var(--display);
+  font-optical-sizing: auto;
+  color: var(--ink);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+  line-height: 1.12;
+  margin: 0;
+}
+
+p { margin: 0; }
+a { color: inherit; }
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.shell {
+  max-width: var(--shell);
+  margin: 0 auto;
+  padding-inline: var(--gut);
+}
+
+.section {
+  padding-block: var(--band);
+  border-top: 1px solid var(--rule-soft);
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--clay);
+  margin-bottom: 18px;
+}
+
+h2 { font-size: clamp(26px, 3.4vw, 34px); }
+
+/* ---------- logo placeholder ---------- */
+
+.mark { display: inline-flex; align-items: center; gap: 11px; text-decoration: none; }
+
+.mark-icon {
+  width: 32px; height: 32px; flex: none;
+  border: 1px dashed var(--rule);
+  border-radius: 2px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 7.5px; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--ink-faint);
+}
+
+.mark-word {
+  font-family: var(--display);
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  border-bottom: 1px dashed var(--rule);
+  padding-bottom: 1px;
+}
+
+/* ---------- header ---------- */
+
+.masthead {
+  position: sticky; top: 0; z-index: 20;
+  background: color-mix(in srgb, var(--stone) 90%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--rule-soft);
+}
+
+.masthead-in {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 20px; height: 68px;
+}
+
+/* ---------- buttons ---------- */
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  font-family: var(--sans); font-size: 14.5px; font-weight: 500;
+  padding: 12px 22px; border-radius: 2px; text-decoration: none;
+  border: 1px solid var(--ink); background: var(--ink); color: var(--stone);
+  transition: background .18s ease, border-color .18s ease, color .18s ease;
+  white-space: nowrap;
+}
+
+.btn:hover { background: var(--clay); border-color: var(--clay); color: #F7F4EE; }
+.btn-sm { padding: 9px 17px; font-size: 13.5px; }
+
+.btn-light { background: #F3EDE7; border-color: #F3EDE7; color: #4A1E18; }
+.btn-light:hover { background: #FFFFFF; border-color: #FFFFFF; color: #4A1E18; }
+
+/* ---------- hero ---------- */
+
+.hero { padding-block: clamp(52px, 8vw, 92px); }
+
+.hero h1 {
+  font-size: clamp(34px, 5.4vw, 52px);
+  line-height: 1.07;
+  letter-spacing: -0.03em;
+  max-width: 19ch;
+}
+
+.hero h1 em {
+  font-style: italic; font-weight: 300;
+  color: var(--clay); display: block;
+}
+
+.hero p {
+  margin-top: 24px;
+  font-size: clamp(17px, 1.6vw, 19px);
+  max-width: 52ch;
+}
+
+.hero .btn { margin-top: 32px; }
+
+/* ---------- outcome rows ---------- */
+
+.rows { margin-top: 30px; border-top: 1px solid var(--rule); }
+
+.row {
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+  gap: 24px;
+  padding: 19px 0;
+  border-bottom: 1px solid var(--rule);
+  align-items: baseline;
+}
+
+@media (max-width: 680px) {
+  .row { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+}
+
+.row h3 { font-size: 20px; }
+.row p { font-size: 15.5px; }
+
+/* ---------- capability strip ---------- */
+
+.strip {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+@media (max-width: 720px) { .strip { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+.strip div {
+  background: var(--paper);
+  padding: 20px 18px;
+}
+
+.strip strong {
+  display: block;
+  font-family: var(--display);
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 5px;
+}
+
+.strip span { font-size: 13.5px; line-height: 1.5; color: var(--ink-soft); }
+
+/* ---------- founder ---------- */
+
+.who {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  gap: clamp(24px, 4vw, 44px);
+  align-items: start;
+}
+
+@media (max-width: 700px) { .who { grid-template-columns: minmax(0, 1fr); } }
+
+.portrait {
+  aspect-ratio: 4 / 5;
+  border: 1px dashed var(--rule);
+  border-radius: 3px;
+  background: var(--paper);
+  display: flex; align-items: center; justify-content: center;
+  text-align: center; padding: 18px;
+  font-size: 10px; font-weight: 600; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--ink-faint);
+}
+
+.who p + p { margin-top: 16px; }
+
+/* ---------- contact ---------- */
+
+.contact {
+  background: var(--clay-deep);
+  color: #E6D6D0;
+  text-align: center;
+  padding-block: clamp(56px, 8vw, 88px);
+}
+
+.contact h2 { color: #FBF7F2; }
+.contact .eyebrow { color: #E0A18A; }
+.contact p { max-width: 48ch; margin: 16px auto 0; }
+.contact .btn { margin-top: 28px; }
+.contact .mail { margin-top: 22px; font-size: 13.5px; color: #C0A99F; }
+
+/* ---------- footer ---------- */
+
+.foot { padding-block: 34px; }
+
+.foot-in {
+  display: flex; flex-wrap: wrap; gap: 14px 28px;
+  align-items: center; justify-content: space-between;
+}
+
+.foot-meta { font-size: 13px; color: var(--ink-faint); }
+
+.placeholder-note {
+  margin-top: 20px; padding-top: 16px;
+  border-top: 1px solid var(--rule-soft);
+  font-size: 12px; color: var(--ink-faint);
+  max-width: 70ch;
+}
+</style>
+
+<header class="masthead">
+  <div class="shell masthead-in">
+    <a class="mark" href="#top" aria-label="Serviceberry home">
+      <span class="mark-icon">Icon</span>
+      <span class="mark-word">Serviceberry</span>
+    </a>
+    <a class="btn btn-sm" href="#contact">Book a meeting</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="shell hero">
+    <p class="eyebrow">Strategic community engagement &middot; Utah</p>
+    <h1>
+      Community engagement that earns its place in your business.
+      <em>Built for your company, not off a shelf.</em>
+    </h1>
+    <p>
+      Serviceberry designs and runs community strategy for Utah companies. Stronger culture
+      inside the building, relationships that last outside it, and impact you can put in a
+      proposal, a board update, or a campaign.
+    </p>
+    <a class="btn" href="#contact">Book a meeting</a>
+  </section>
+
+  <!-- WHAT YOUR COMPANY GETS -->
+  <section class="shell section">
+    <p class="eyebrow">What your company gets</p>
+    <h2>Five returns on the same work.</h2>
+
+    <div class="rows">
+      <div class="row">
+        <h3>Culture people feel</h3>
+        <p>Teams that have built something together, on company time, with their own hands.</p>
+      </div>
+      <div class="row">
+        <h3>Impact you can report</h3>
+        <p>Counted numbers and a written narrative, ready for proposals, RFPs, and the board.</p>
+      </div>
+      <div class="row">
+        <h3>Marketing you can use</h3>
+        <p>Photography, stories, and assets sized for your channels and your careers page.</p>
+      </div>
+      <div class="row">
+        <h3>Community relationships</h3>
+        <p>Named partners who know your company, take your call, and come back next year.</p>
+      </div>
+      <div class="row">
+        <h3>Impact that is real</h3>
+        <p>Work chosen because it matters where you operate, not because it photographs well.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUSTOM -->
+  <section class="shell section">
+    <p class="eyebrow">How it works</p>
+    <h2>Every program is built from scratch, around your company.</h2>
+    <p style="margin-top:16px; max-width:58ch;">
+      Some companies want one very good day. Others want a year long campaign with a theme, a
+      calendar, and a reporting rhythm their leadership can follow. I scope it after we talk,
+      around your goals, your culture, your calendar, and what your team can carry.
+    </p>
+
+    <div class="strip">
+      <div>
+        <strong>Strategy</strong>
+        <span>Working sessions with your leadership to decide what your company stands for and where it shows up.</span>
+      </div>
+      <div>
+        <strong>Partnerships</strong>
+        <span>The right nonprofits and community partners, vetted, briefed, and managed.</span>
+      </div>
+      <div>
+        <strong>Production</strong>
+        <span>Venues, materials, staffing, and the day itself, run end to end.</span>
+      </div>
+      <div>
+        <strong>Reporting</strong>
+        <span>Participation, outcomes, photography, and the copy to tell people about it.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO -->
+  <section class="shell section">
+    <p class="eyebrow">Who runs it</p>
+    <div class="who">
+      <div class="portrait">Founder portrait</div>
+      <div>
+        <h2 style="margin-bottom:16px;">Eliza Rhodes</h2>
+        <p>
+          This year I directed logistics for more than 400 service projects at the G20 Interfaith
+          Forum. Before that I led a marketing team of 20. Most of my career has been on the
+          community side of this work, as a founder and a board member, which is why the strategy
+          and the story get as much attention as the day itself.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="shell">
+      <p class="eyebrow">Start here</p>
+      <h2>Let's talk about your year.</h2>
+      <p>
+        Thirty minutes: what your company cares about, what you already do, and what you want to be
+        able to say about it. I will come back with a plan built for you.
+      </p>
+      <a class="btn btn-light" href="mailto:hello@serviceberrystrategies.com">Book a meeting</a>
+      <p class="mail">hello@serviceberrystrategies.com</p>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="shell">
+    <div class="foot-in">
+      <a class="mark" href="#top" aria-label="Serviceberry home">
+        <span class="mark-icon">Icon</span>
+        <span class="mark-word">Serviceberry</span>
+      </a>
+      <div class="foot-meta">Serviceberry Strategies LLC &middot; Salt Lake City, Utah</div>
+    </div>
+    <p class="placeholder-note">
+      Design study. Logo icon, wordmark, and portrait are placeholders pending the brand guide.
+      Colours and typefaces are stand ins; every value is a single CSS token, so the final palette
+      drops straight in.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
