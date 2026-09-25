@@ -7,7 +7,7 @@ Live at https://serviceberrystrategies.com via GitHub Pages.
 
 - `index.html` is the whole site. HTML, CSS, and content in one file. No build step, no dependencies.
 - `CNAME` tells GitHub Pages to serve the site at serviceberrystrategies.com.
-- `Publish site.command` publishes. Double click it in Finder.
+- `deploy.sh` commits and pushes. Usage: `./deploy.sh "what changed"`
 
 ## Still placeholder
 
@@ -18,5 +18,8 @@ dropped in by editing that one block.
 
 ## How changes get made
 
-Claude edits the files in this folder directly. Eliza then double clicks
-`Publish site.command` in Finder. GitHub Pages rebuilds in about a minute.
+Claude edits the files in this folder directly. Eliza then runs:
+
+    ./deploy.sh "what changed"
+
+That commits and pushes, and GitHub Pages rebuilds in about a minute.
