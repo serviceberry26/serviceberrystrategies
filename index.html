@@ -187,6 +187,9 @@ details[open] summary{border-color:var(--evergreen);background:rgba(44,58,46,.05
 .foot{border-top:1px solid var(--rule);padding-block:40px}
 .foot-in{display:flex;flex-wrap:wrap;gap:12px 30px;align-items:center;
   justify-content:space-between;font-size:13px;color:var(--ink-faint);letter-spacing:.02em}
+.foot-in a{color:var(--ink);text-decoration:underline;text-underline-offset:3px;
+  text-decoration-thickness:1px;text-decoration-color:var(--rule)}
+.foot-in a:hover{text-decoration-color:var(--cedar)}
 .note{margin-top:26px;padding-top:18px;border-top:1px solid var(--rule-soft);
   font-size:12px;color:var(--ink-faint);max-width:78ch}
 </style>
@@ -199,7 +202,7 @@ details[open] summary{border-color:var(--evergreen);background:rgba(44,58,46,.05
     <nav class="navbtns">
       <a class="btn" href="https://calendar.app.google/gMrUhCgmowRnLg8F9" target="_blank" rel="noopener">Book a consultation</a>
       <a class="btn btn-quiet" href="#about">About</a>
-      <a class="btn btn-quiet" href="#contact">Contact</a>
+      <a class="btn btn-quiet" href="mailto:hello@serviceberrystrategies.com?subject=Serviceberry%20inquiry">Contact</a>
     </nav>
   </div>
 </header>
@@ -343,7 +346,7 @@ details[open] summary{border-color:var(--evergreen);background:rgba(44,58,46,.05
 
   <footer class="shell foot" id="contact">
     <div class="foot-in">
-      <span>hello@serviceberrystrategies.com</span>
+      <a href="mailto:hello@serviceberrystrategies.com?subject=Serviceberry%20inquiry">hello@serviceberrystrategies.com</a>
       <span>Serviceberry Strategies LLC &middot; Salt Lake City, Utah</span>
     </div>
     <p class="note">
