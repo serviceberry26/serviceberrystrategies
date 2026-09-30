@@ -171,16 +171,20 @@ details[open] summary{border-color:var(--evergreen);background:rgba(44,58,46,.05
 
 /* bio */
 .bio{padding-block:var(--band)}
-.bio-in{display:grid;grid-template-columns:210px minmax(0,1fr);
-  gap:clamp(26px,3vw,44px);align-items:start}
-@media(max-width:640px){.bio-in{grid-template-columns:150px minmax(0,1fr);gap:22px}}
-@media(max-width:440px){.bio-in{grid-template-columns:minmax(0,1fr);max-width:180px}}
-.portrait{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;display:block;
-  border:1px solid var(--rule)}
-.bio h3{font-size:22px;font-weight:600;margin-bottom:4px}
+.bio-in{display:grid;grid-template-columns:268px minmax(0,1fr);
+  gap:clamp(26px,3vw,46px);align-items:start}
+@media(max-width:820px){.bio-in{grid-template-columns:224px minmax(0,1fr);gap:26px}}
+@media(max-width:560px){.bio-in{grid-template-columns:minmax(0,1fr)}}
+.portrait-frame{border:8px solid var(--calm);padding:20px;margin-bottom:30px}
+:root[data-theme="dark"] .portrait-frame{border-color:var(--evergreen)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .portrait-frame{border-color:var(--evergreen)}}
+@media(max-width:820px){.portrait-frame{border-width:6px;padding:15px;margin-bottom:24px}}
+@media(max-width:560px){.portrait-frame{max-width:250px}}
+.portrait{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;display:block}
+.bio h3{font-size:22px;font-weight:600;margin-top:22px;margin-bottom:5px}
 .bio .role{font-size:10.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--cedar);margin-bottom:20px}
-.bio p{font-size:14.8px;line-height:1.72;max-width:none}
+  color:var(--cedar)}
+.bio p{font-size:13.5px;line-height:1.75}
 .bio p+p{margin-top:14px}
 
 /* footer */
@@ -326,23 +330,36 @@ details[open] summary{border-color:var(--evergreen);background:rgba(44,58,46,.05
 
   <section class="shell bio" id="about">
     <div class="bio-in">
-      <img class="portrait" src="eliza-rhodes.jpg" alt="Eliza Rhodes" width="800" height="800" loading="lazy">
-      <div>
+      <div class="portrait-frame">
+        <img class="portrait" src="eliza-rhodes.jpg" alt="Eliza Rhodes" width="800" height="800" loading="lazy">
         <h3>Eliza Rhodes</h3>
         <p class="role">Founder</p>
+      </div>
+      <div>
         <p>
-          I started a charity for healthcare access in Haiti when I was six. It is still
-          going and has raised more than $40,000. Since then I have planned and executed
-          over 25 events, including a service day for more than 400 people at the 2026
-          G20 Interfaith Forum.
+          There is a major disconnect in how modern businesses approach community
+          engagement. Most companies treat impact as an occasional side project, like a
+          seasonal charity drive or a one-off service event, rather than an integral part
+          of their strategic core. But corporate social responsibility shouldn't be an
+          afterthought; it is one of the most powerful drivers of culture, brand value,
+          and long-term business growth.
         </p>
         <p>
-          Somewhere in there I fell for the business side of it. I led a marketing team
-          of 20 and grew engagement by 33%, and I came to believe that companies are
-          where good work can really scale. You already have the people, the budget, and
-          the reach. What is usually missing is someone whose job is to make it strategic
-          instead of occasional. That is the part I love, and I would love to do it for
-          you.
+          I founded Serviceberry to bridge that gap. My approach is rooted in a lifetime
+          of building community initiatives from the ground up. At six years old, I set
+          out to start my first business, but with a little guidance from my parents, I
+          realized I didn't need the money and redirected that entrepreneurial energy
+          into a charitable project called Eliza's Hearts 4 Haiti. That project is still
+          running today and has raised over $40,000 for healthcare access. Over the
+          course of my career, I've directed high-performing marketing teams, executed
+          over 25 major events, and led large-scale mobilization efforts like a
+          400-person service project at the 2026 G20 Interfaith Forum, learning firsthand
+          how to scale purpose alongside business objectives.
+        </p>
+        <p>
+          Businesses already possess the budget, talent, and reach required to drive
+          meaningful change. Serviceberry provides the strategic framework to turn those
+          existing resources into measurable, lasting impact.
         </p>
       </div>
     </div>
