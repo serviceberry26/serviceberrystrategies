@@ -187,6 +187,34 @@ details[open] summary{border-color:var(--evergreen);background:rgba(44,58,46,.05
 .bio p{font-size:13.5px;line-height:1.75}
 .bio p+p{margin-top:14px}
 
+/* inquiry form */
+.inquire{padding-block:var(--band);border-top:1px solid var(--rule)}
+.inquire-head{max-width:54ch;margin-bottom:clamp(30px,4vw,44px)}
+.inquire-head h2{font-size:clamp(26px,3.4vw,36px);margin-bottom:16px}
+.inquire-lede{font-size:16px}
+.form{max-width:760px;display:grid;gap:20px}
+.row2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+@media(max-width:620px){.row2{grid-template-columns:minmax(0,1fr)}}
+.form label{display:block;font-size:11px;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ink-faint)}
+.form input,.form select,.form textarea{display:block;width:100%;margin-top:9px;
+  font-family:var(--sans);font-size:15.5px;color:var(--ink);background:var(--surface);
+  border:1px solid var(--rule);border-radius:0;padding:13px 14px;
+  letter-spacing:normal;text-transform:none;transition:border-color .18s ease}
+.form textarea{resize:vertical;min-height:120px;line-height:1.6}
+.form input:focus,.form select:focus,.form textarea:focus{outline:none;
+  border-color:var(--calm);box-shadow:inset 0 0 0 1px var(--calm)}
+.form select{appearance:none;cursor:pointer;
+  background-image:linear-gradient(45deg,transparent 49%,var(--ink-faint) 50%),
+                   linear-gradient(-45deg,transparent 49%,var(--ink-faint) 50%);
+  background-size:6px 6px,6px 6px;background-repeat:no-repeat;
+  background-position:calc(100% - 20px) 21px,calc(100% - 14px) 21px}
+.form button{justify-self:start;margin-top:4px}
+.form button[disabled]{opacity:.6;cursor:default}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.form-note{font-size:14.5px;line-height:1.55;padding:13px 15px;border-left:3px solid var(--calm)}
+.form-note.bad{border-left-color:var(--ruby)}
+
 /* footer */
 .foot{border-top:1px solid var(--rule);padding-block:40px}
 .foot-in{display:flex;flex-wrap:wrap;gap:12px 30px;align-items:center;
@@ -204,9 +232,8 @@ details[open] summary{border-color:var(--evergreen);background:rgba(44,58,46,.05
       <span class="mark-word">Serviceberry</span>
     </a>
     <nav class="navbtns">
-      <a class="btn" href="https://calendar.app.google/gMrUhCgmowRnLg8F9" target="_blank" rel="noopener">Book a consultation</a>
+      <a class="btn" href="#contact">Start a conversation</a>
       <a class="btn btn-quiet" href="#about">About</a>
-      <a class="btn btn-quiet" href="mailto:hello@serviceberrystrategies.com?subject=Serviceberry%20inquiry">Contact</a>
     </nav>
   </div>
 </header>
@@ -232,7 +259,7 @@ details[open] summary{border-color:var(--evergreen);background:rgba(44,58,46,.05
             adding headcount and without handing the work to someone in HR who already
             has a job.
           </p>
-          <a class="btn btn-big" href="https://calendar.app.google/gMrUhCgmowRnLg8F9" target="_blank" rel="noopener">Book a consultation</a>
+          <a class="btn btn-big" href="#contact">Start a conversation</a>
         </div>
       </div>
     </section>
@@ -323,7 +350,7 @@ details[open] summary{border-color:var(--evergreen);background:rgba(44,58,46,.05
     <div class="shell">
       <div class="rule"></div>
       <h2>Strategic Impact. Measurable Returns.</h2>
-      <a class="btn btn-big btn-light" href="https://calendar.app.google/gMrUhCgmowRnLg8F9" target="_blank" rel="noopener">Book a consultation</a>
+      <a class="btn btn-big btn-light" href="#contact">Start a conversation</a>
     </div>
   </section>
 
@@ -365,7 +392,58 @@ details[open] summary{border-color:var(--evergreen);background:rgba(44,58,46,.05
     </div>
   </section>
 
-  <footer class="shell foot" id="contact">
+  <section class="shell inquire" id="contact">
+    <p class="eyebrow"><span class="pip"></span>Start here</p>
+    <div class="inquire-head">
+      <h2>Tell me about your company.</h2>
+      <p class="inquire-lede">
+        A few details is all I need. I read every one of these myself and I will come
+        back to you the same day. No pitch deck, no pressure, just a conversation about
+        what your year could look like.
+      </p>
+    </div>
+
+    <form class="form" id="inquiry">
+      <input type="hidden" name="access_key" value="9f0efb07-22e8-4f30-b8b7-361d3c289ed6">
+      <input type="hidden" name="subject" value="New Serviceberry inquiry">
+      <input type="hidden" name="from_name" value="Serviceberry website">
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <div class="row2">
+        <label>Name
+          <input type="text" name="name" required autocomplete="name">
+        </label>
+        <label>Work email
+          <input type="email" name="email" required autocomplete="email">
+        </label>
+      </div>
+
+      <div class="row2">
+        <label>Company
+          <input type="text" name="company" required autocomplete="organization">
+        </label>
+        <label>Roughly how many people work there
+          <select name="headcount" required>
+            <option value="">Select one</option>
+            <option>Under 100</option>
+            <option>100 to 250</option>
+            <option>250 to 500</option>
+            <option>500 to 1,000</option>
+            <option>More than 1,000</option>
+          </select>
+        </label>
+      </div>
+
+      <label>What prompted you to reach out
+        <textarea name="message" rows="4" required></textarea>
+      </label>
+
+      <button class="btn btn-big" type="submit">Send</button>
+      <p class="form-note" id="formnote" hidden></p>
+    </form>
+  </section>
+
+  <footer class="shell foot">
     <div class="foot-in">
       <a href="mailto:hello@serviceberrystrategies.com?subject=Serviceberry%20inquiry">hello@serviceberrystrategies.com</a>
       <span>Serviceberry Strategies LLC &middot; Salt Lake City, Utah</span>
@@ -376,5 +454,31 @@ details[open] summary{border-color:var(--evergreen);background:rgba(44,58,46,.05
   </footer>
 </main>
 
+<script>
+(function(){
+  var f=document.getElementById('inquiry'),note=document.getElementById('formnote');
+  if(!f) return;
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var btn=f.querySelector('button[type=submit]');
+    btn.disabled=true; btn.textContent='Sending'; note.hidden=true;
+    fetch('https://api.web3forms.com/submit',{
+      method:'POST',
+      headers:{'Content-Type':'application/json',Accept:'application/json'},
+      body:JSON.stringify(Object.fromEntries(new FormData(f)))
+    }).then(function(r){return r.json();}).then(function(d){
+      if(!d.success) throw new Error(d.message||'failed');
+      f.reset();
+      note.className='form-note';
+      note.textContent='Thank you. That is with me now and I will get back to you today.';
+    }).catch(function(){
+      note.className='form-note bad';
+      note.textContent='Something went wrong sending that. Please email hello@serviceberrystrategies.com directly and I will pick it up there.';
+    }).then(function(){
+      note.hidden=false; btn.disabled=false; btn.textContent='Send';
+    });
+  });
+})();
+</script>
 </body>
 </html>
