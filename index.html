@@ -68,6 +68,9 @@ p{margin:0} a{color:inherit}
 :focus-visible{outline:2px solid var(--focus);outline-offset:3px}
 .shell{max-width:var(--shell);margin:0 auto;padding-inline:var(--gut)}
 .shell-wide{max-width:var(--wide);margin:0 auto;padding-inline:var(--gut)}
+.eyebrow{display:flex;align-items:center;gap:11px;font-size:10px;font-weight:700;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--cedar);
+  margin-bottom:20px}
 .pip{display:inline-block;width:8px;height:8px;background:var(--ruby);flex:none}
 
 /* header */
@@ -186,7 +189,7 @@ details[open] summary{border-color:var(--evergreen);background:rgba(44,58,46,.05
 /* inquiry form */
 .inquire{padding-block:var(--band);border-top:1px solid var(--rule)}
 .inquire-head{max-width:54ch;margin-bottom:clamp(30px,4vw,44px)}
-.inquire-head h2{font-size:clamp(26px,3.4vw,36px);margin-bottom:16px}
+.inquire-head h2{font-size:clamp(26px,3.4vw,36px)}
 .form{max-width:760px;display:grid;gap:20px}
 .row2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
 @media(max-width:620px){.row2{grid-template-columns:minmax(0,1fr)}}
