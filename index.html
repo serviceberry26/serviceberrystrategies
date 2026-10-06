@@ -41,7 +41,9 @@
 
   --display:"Spectral","Iowan Old Style",Georgia,serif;
   --sans:"Archivo","Helvetica Neue",Arial,sans-serif;
-  --hgap:clamp(24px,3vw,43px);
+  --hgap:clamp(20px,2.45vw,35px);
+  --hpadt:clamp(24px,3.05vw,44px);
+  --hpadb:clamp(18px,2.6vw,38px);
   --shell:1180px; --wide:1340px;
   --gut:clamp(18px,3.5vw,40px);
   --band:clamp(60px,8vw,104px);
@@ -103,7 +105,7 @@ p{margin:0} a{color:inherit}
 .herowrap{background:var(--white);border-bottom:1px solid var(--rule);overflow:hidden}
 :root[data-theme="dark"] .herowrap{background:#171B15}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .herowrap{background:#171B15}}
-.hero{padding-block:clamp(18px,2.2vw,32px) clamp(12px,1.6vw,26px)}
+.hero{padding-block:var(--hpadt) var(--hpadb)}
 @media(max-width:820px){.hero{padding-bottom:clamp(40px,7vw,64px)}}
 .hero-grid{position:relative;display:grid;grid-template-columns:184px minmax(0,1fr);
   column-gap:clamp(26px,4vw,60px)}
@@ -112,7 +114,7 @@ p{margin:0} a{color:inherit}
 
 .botanical{position:absolute;grid-column:1;grid-row:2 / 4;align-self:end;justify-self:start;
   width:359px;max-width:none;height:auto;display:block;pointer-events:none;
-  margin-bottom:calc(-1 * (clamp(12px,1.6vw,26px) + 25px));
+  margin-bottom:calc(-1 * (var(--hpadb) + 25px));
   margin-left:-147px;
   opacity:.92}
 @media(max-width:820px){.botanical{display:none}}
