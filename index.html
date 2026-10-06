@@ -77,7 +77,6 @@ p{margin:0} a{color:inherit}
 .mark{display:inline-flex;align-items:center;text-decoration:none}
 .mark-word{font-family:var(--display);font-size:34px;font-weight:500;color:var(--ink);
   letter-spacing:-0.005em}
-.navbtns{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 
 .btn{display:inline-flex;align-items:center;justify-content:center;
   font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.09em;
@@ -87,9 +86,6 @@ p{margin:0} a{color:inherit}
 .btn:hover{background:var(--evergreen-hi);border-color:var(--evergreen-hi)}
 :root[data-theme="dark"] .btn{color:#12150F}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn{color:#12150F}}
-.btn-quiet{background:transparent;color:var(--ink);border-color:var(--rule)}
-.btn-quiet:hover{background:transparent;color:var(--evergreen);border-color:var(--evergreen)}
-:root[data-theme="dark"] .btn-quiet{color:var(--ink)}
 .btn-big{font-size:13.5px;padding:18px 40px}
 .btn-light{background:var(--mist);border-color:var(--mist);color:var(--calm)}
 .btn-light:hover{background:var(--white);border-color:var(--white);color:var(--calm)}
@@ -230,9 +226,6 @@ details[open] summary{border-color:var(--evergreen);background:rgba(44,58,46,.05
     <a class="mark" href="#top" aria-label="Serviceberry">
       <span class="mark-word">Serviceberry</span>
     </a>
-    <nav class="navbtns">
-      <a class="btn btn-quiet" href="#about">About</a>
-    </nav>
   </div>
 </header>
 
