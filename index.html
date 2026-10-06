@@ -195,6 +195,7 @@ details[open] summary{border-color:var(--evergreen);background:rgba(44,58,46,.05
 @media(max-width:620px){.row2{grid-template-columns:minmax(0,1fr)}}
 .form label{display:block;font-size:11px;font-weight:700;letter-spacing:.14em;
   text-transform:uppercase;color:var(--ink-faint)}
+.form label .opt{font-weight:400;letter-spacing:.1em}
 .form input,.form select,.form textarea{display:block;width:100%;margin-top:9px;
   font-family:var(--sans);font-size:15.5px;color:var(--ink);background:var(--surface);
   border:1px solid var(--rule);border-radius:0;padding:13px 14px;
@@ -411,8 +412,8 @@ details[open] summary{border-color:var(--evergreen);background:rgba(44,58,46,.05
         <label>Company
           <input type="text" name="company" required autocomplete="organization">
         </label>
-        <label>Roughly how many people work there
-          <select name="headcount" required>
+        <label>Roughly how many people work there <span class="opt">(optional)</span>
+          <select name="headcount">
             <option value="">Select one</option>
             <option>Under 100</option>
             <option>100 to 250</option>
@@ -423,8 +424,8 @@ details[open] summary{border-color:var(--evergreen);background:rgba(44,58,46,.05
         </label>
       </div>
 
-      <label>What prompted you to reach out
-        <textarea name="message" rows="4" required></textarea>
+      <label>What prompted you to reach out <span class="opt">(optional)</span>
+        <textarea name="message" rows="4"></textarea>
       </label>
 
       <button class="btn btn-big" type="submit">Send</button>
