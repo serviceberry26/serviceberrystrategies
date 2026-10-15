@@ -91,7 +91,9 @@ p{margin:0} a{color:inherit}
 /* alternating split rows */
 .rows{display:grid;gap:var(--gap);margin-top:var(--gap)}
 .split{display:grid;grid-template-columns:1fr 1fr;min-height:430px}
-@media(max-width:860px){.split{grid-template-columns:1fr}}
+@media(max-width:860px){.split{grid-template-columns:1fr}
+  /* stacked, the number always leads the panel it belongs to */
+  .split .tile{order:-1}}
 .panel{display:flex;flex-direction:column;justify-content:center;align-items:center;
   text-align:center;padding:clamp(40px,5vw,70px) clamp(24px,4vw,56px)}
 .panel-olive{background:var(--olive);color:var(--cream)}
