@@ -34,6 +34,7 @@
   --shell:1360px;
   --gap:14px;
   --logo-h:36px;        /* logo height, placeholder or final */
+  --nav-h:77px;         /* header height, so the hero can fill the rest */
 }
 *{box-sizing:border-box}
 body{margin:0;background:#fff;color:var(--ink);font-family:var(--sans);
@@ -68,8 +69,13 @@ p{margin:0} a{color:inherit}
   text-transform:uppercase;line-height:1;color:var(--ink)}
 
 /* hero */
+/* the hero fills the first screen on its own */
 .hero{background:var(--olive);color:var(--cream);text-align:center;
-  padding-block:clamp(52px,6.4vw,84px)}
+  padding-block:clamp(52px,6.4vw,84px);
+  display:flex;align-items:center;
+  min-height:calc(100vh - var(--nav-h));
+  min-height:calc(100svh - var(--nav-h))}
+.hero > .shell{width:100%}
 .hero h1{font-size:clamp(30px,4.5vw,58px);font-weight:900;margin:0 auto;
   max-width:min(100%,1240px)}
 
