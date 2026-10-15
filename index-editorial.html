@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Serviceberry | Strategic community engagement for Utah companies</title>
+<meta name="description" content="Serviceberry builds and runs strategic community engagement programs for Utah companies. Culture inside the building, relationships outside it, and an impact report your team can use.">
+
+<link rel="canonical" href="https://serviceberrystrategies.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://serviceberrystrategies.com/">
+<meta property="og:title" content="Serviceberry">
+<meta property="og:description" content="Serviceberry builds and runs strategic community engagement programs for Utah companies. Culture inside the building, relationships outside it, and an impact report your team can use.">
+<meta property="og:site_name" content="Serviceberry">
+<meta property="og:image" content="https://serviceberrystrategies.com/serviceberry-mark.png">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="serviceberry-mark.png">
+<link rel="apple-touch-icon" href="serviceberry-mark.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Spectral:wght@300;400;500;600&display=swap">
+</head>
+<body>
+
+<style>
+:root{
+  --mist:#F0EFEB; --white:#FFFFFF;
+  --evergreen:#2C3A2E; --evergreen-hi:#3C5040;
+  --calm:#4A5A4C;            /* the quieter green for the band */
+  --sage:#7C8B78;
+  --cedar:#876E4F; --olive:#52471F; --rose:#D4BAA1;
+  --caviar:#000000; --ruby:#811F1E;
+
+  --ground:var(--mist); --surface:var(--white);
+  --ink:#141A15; --ink-soft:#474C45; --ink-faint:#6E6B60;
+  --rule:#DBD6CB; --rule-soft:#E7E2D9;
+  --focus:var(--evergreen);
+
+  --display:"Spectral","Iowan Old Style",Georgia,serif;
+  --sans:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --hgap:clamp(20px,2.45vw,35px);
+  --hpadt:clamp(30px,3.9vw,56px);
+  --hpadb:clamp(24px,3.4vw,49px);
+  --shell:1180px; --wide:1340px;
+  --gut:clamp(18px,3.5vw,40px);
+  --band:clamp(60px,8vw,104px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#12150F; --surface:#191D16; --white:#191D16;
+  --ink:#F0EFEB; --ink-soft:#BDBCAF; --ink-faint:#928F83;
+  --evergreen:#9DBBA2; --evergreen-hi:#B4CDB8; --calm:#2A342A;
+  --cedar:#C9A87C; --ruby:#B8433F;
+  --rule:#2E332B; --rule-soft:#232719;}}
+:root[data-theme="dark"]{
+  --ground:#12150F; --surface:#191D16; --white:#191D16;
+  --ink:#F0EFEB; --ink-soft:#BDBCAF; --ink-faint:#928F83;
+  --evergreen:#9DBBA2; --evergreen-hi:#B4CDB8; --calm:#2A342A;
+  --cedar:#C9A87C; --ruby:#B8433F;
+  --rule:#2E332B; --rule-soft:#232719;}
+
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink-soft);font-family:var(--sans);
+  font-size:16.5px;line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--display);color:var(--ink);font-weight:500;
+  font-style:normal;letter-spacing:-0.012em;text-wrap:balance;
+  line-height:1.16;margin:0}
+p{margin:0} a{color:inherit}
+:focus-visible{outline:2px solid var(--focus);outline-offset:3px}
+.shell{max-width:var(--shell);margin:0 auto;padding-inline:var(--gut)}
+.shell-wide{max-width:var(--wide);margin:0 auto;padding-inline:var(--gut)}
+.eyebrow{display:flex;align-items:center;gap:11px;font-size:10px;font-weight:700;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--cedar);
+  margin-bottom:20px}
+.pip{display:inline-block;width:8px;height:8px;background:var(--ruby);flex:none}
+
+/* header */
+.masthead{background:var(--ground);border-bottom:1px solid var(--rule)}
+.masthead-in{display:flex;align-items:center;justify-content:space-between;
+  gap:22px;min-height:102px;flex-wrap:wrap;padding-block:18px}
+.mark{display:inline-flex;align-items:center;text-decoration:none}
+.mark-word{font-family:var(--display);font-size:34px;font-weight:500;color:var(--ink);
+  letter-spacing:-0.005em}
+.mark-tag{font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--cedar);line-height:1.7;margin:0;
+  padding-top:9px;border-top:2px solid var(--ruby)}
+@media(max-width:560px){.mark-tag{font-size:9.5px;letter-spacing:.16em}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;
+  font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.09em;
+  text-transform:uppercase;padding:13px 22px;text-decoration:none;
+  border:1px solid var(--evergreen);background:var(--evergreen);color:var(--mist);
+  white-space:nowrap;transition:background .18s ease,border-color .18s ease,color .18s ease}
+.btn:hover{background:var(--evergreen-hi);border-color:var(--evergreen-hi)}
+:root[data-theme="dark"] .btn{color:#12150F}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn{color:#12150F}}
+.btn-big{font-size:13.5px;padding:18px 40px}
+.btn-light{background:var(--mist);border-color:var(--mist);color:var(--calm)}
+.btn-light:hover{background:var(--white);border-color:var(--white);color:var(--calm)}
+:root[data-theme="dark"] .btn-light{background:#F0EFEB;border-color:#F0EFEB;color:#12150F}
+
+/* hero band, full bleed and wide */
+.herowrap{background:var(--white);border-bottom:1px solid var(--rule);overflow:hidden}
+:root[data-theme="dark"] .herowrap{background:#171B15}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .herowrap{background:#171B15}}
+.hero{padding-block:var(--hpadt) var(--hpadb)}
+@media(max-width:820px){.hero{padding-bottom:clamp(40px,7vw,64px)}}
+.hero-grid{position:relative;display:grid;grid-template-columns:184px minmax(0,1fr);
+  column-gap:clamp(26px,4vw,60px)}
+@media(max-width:820px){.hero-grid{grid-template-columns:minmax(0,1fr)}
+  .hero-grid>*{grid-column:1 !important;grid-row:auto !important}}
+
+.botanical{position:absolute;left:0;width:auto;max-width:none;display:block;pointer-events:none;
+  height:calc(100% + var(--hpadt) + var(--hpadb) - 40px);
+  bottom:calc(-1 * var(--hpadb));
+  transform:translateX(-41%);
+  opacity:.92}
+@media(max-width:820px){.botanical{display:none}}
+:root[data-theme="dark"] .botanical{opacity:.15}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .botanical{opacity:.15}}
+
+.hero h1{grid-column:2;grid-row:1;font-size:clamp(33px,5.2vw,60px);line-height:1.05;
+  letter-spacing:-0.026em;max-width:none;font-weight:500}
+.hero h1 span{display:block;color:var(--cedar);font-weight:400}
+
+.hero-rule{grid-column:2;grid-row:2;height:1px;background:var(--rule);
+  margin-top:var(--hgap)}
+
+.hero-foot{grid-column:2;grid-row:3;display:flex;flex-direction:column;
+  align-items:flex-start;gap:var(--hgap);padding-top:var(--hgap)}
+.hero-lede{font-size:clamp(16px,1.45vw,17.5px);max-width:58ch;margin:0}
+.hero-foot .btn{flex:none}
+
+/* three cards */
+.three{padding-block:var(--band)}
+.section-head{display:flex;align-items:baseline;gap:16px;margin-bottom:38px}
+.section-head h2{font-size:clamp(23px,2.7vw,30px)}
+.section-head .line{flex:1;height:1px;background:var(--rule)}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+@media(max-width:880px){.cards{grid-template-columns:minmax(0,1fr)}}
+.card{background:var(--surface);border:1px solid var(--rule);padding:30px 27px;
+  display:flex;flex-direction:column;gap:16px}
+.card-step{display:flex;align-items:center;gap:10px;margin:0;font-family:var(--sans);
+  font-size:13px;font-weight:700;
+  letter-spacing:.17em;text-transform:uppercase;color:var(--cedar);
+  padding-bottom:17px;border-bottom:1px solid var(--rule-soft)}
+.card>p{font-size:14.8px;line-height:1.62}
+details{margin-top:auto;padding-top:18px}
+summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;
+  font-size:11.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  padding:10px 16px;border:1px solid var(--rule);color:var(--ink);
+  transition:border-color .18s ease,background .18s ease}
+summary::-webkit-details-marker{display:none}
+summary:hover{border-color:var(--evergreen)}
+details[open] summary{border-color:var(--evergreen);background:rgba(44,58,46,.05)}
+.more{font-size:14px;line-height:1.62;padding-top:16px}
+.more p+p{margin-top:11px}
+.src{color:var(--ink-faint);font-size:12px;line-height:1.5;
+  border-left:3px solid var(--ruby);padding-left:10px;margin-top:12px}
+.src a{color:var(--cedar);text-decoration:underline;text-underline-offset:2px}
+
+/* calm green statement band */
+.anchor{background:var(--calm);text-align:center;padding-block:var(--band)}
+.anchor .rule{width:36px;height:3px;background:var(--ruby);margin:0 auto 30px}
+.anchor h2{font-family:var(--display);font-weight:400;
+  font-size:clamp(26px,4vw,48px);line-height:1.18;letter-spacing:-0.02em;
+  color:#F4F3EF;max-width:20ch;margin:0 auto}
+.anchor .btn{margin-top:40px}
+
+/* bio */
+.bio{padding-block:var(--band)}
+.bio-in{display:grid;grid-template-columns:268px minmax(0,1fr);
+  gap:clamp(26px,3vw,46px);align-items:center}
+@media(max-width:820px){.bio-in{grid-template-columns:224px minmax(0,1fr);gap:26px}}
+@media(max-width:560px){.bio-in{grid-template-columns:minmax(0,1fr)}}
+.portrait-frame{border:8px solid var(--calm);padding:20px}
+:root[data-theme="dark"] .portrait-frame{border-color:var(--evergreen)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .portrait-frame{border-color:var(--evergreen)}}
+@media(max-width:820px){.portrait-frame{border-width:6px;padding:15px;margin-bottom:24px}}
+@media(max-width:560px){.portrait-frame{max-width:250px}}
+.portrait{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;display:block}
+.bio h3{font-size:22px;font-weight:600;margin-top:22px;margin-bottom:5px}
+.bio .role{font-size:10.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--cedar)}
+.bio p{font-size:16px;line-height:1.9}
+.bio p+p{margin-top:22px}
+
+/* inquiry form */
+.inquire{padding-block:var(--band);border-top:1px solid var(--rule)}
+.inquire-head{max-width:54ch;margin-bottom:clamp(30px,4vw,44px)}
+.inquire-head h2{font-size:clamp(26px,3.4vw,36px)}
+.form{max-width:760px;display:grid;gap:20px}
+.row2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+@media(max-width:620px){.row2{grid-template-columns:minmax(0,1fr)}}
+.form label{display:block;font-size:11px;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ink-faint)}
+.form input,.form select,.form textarea{display:block;width:100%;margin-top:9px;
+  font-family:var(--sans);font-size:15.5px;color:var(--ink);background:var(--surface);
+  border:1px solid var(--rule);border-radius:0;padding:13px 14px;
+  letter-spacing:normal;text-transform:none;transition:border-color .18s ease}
+.form textarea{resize:vertical;min-height:120px;line-height:1.6}
+.form input:focus,.form select:focus,.form textarea:focus{outline:none;
+  border-color:var(--calm);box-shadow:inset 0 0 0 1px var(--calm)}
+.form select{appearance:none;cursor:pointer;
+  background-image:linear-gradient(45deg,transparent 49%,var(--ink-faint) 50%),
+                   linear-gradient(-45deg,transparent 49%,var(--ink-faint) 50%);
+  background-size:6px 6px,6px 6px;background-repeat:no-repeat;
+  background-position:calc(100% - 20px) 21px,calc(100% - 14px) 21px}
+.form button{justify-self:start;margin-top:4px}
+.form button[disabled]{opacity:.6;cursor:default}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.form-note{font-size:14.5px;line-height:1.55;padding:13px 15px;border-left:3px solid var(--calm)}
+.form-note.bad{border-left-color:var(--ruby)}
+
+/* footer */
+.foot{border-top:1px solid var(--rule);padding-block:40px}
+.foot-in{display:flex;flex-wrap:wrap;gap:12px 30px;align-items:center;
+  justify-content:space-between;font-size:13px;color:var(--ink-faint);letter-spacing:.02em}
+.foot-in a{color:var(--ink);text-decoration:underline;text-underline-offset:3px;
+  text-decoration-thickness:1px;text-decoration-color:var(--rule)}
+.foot-in a:hover{text-decoration-color:var(--cedar)}
+.note{margin-top:26px;padding-top:18px;border-top:1px solid var(--rule-soft);
+  font-size:12px;color:var(--ink-faint);max-width:78ch}
+</style>
+
+<header class="masthead">
+  <div class="shell-wide masthead-in">
+    <a class="mark" href="#top" aria-label="Serviceberry">
+      <span class="mark-word">Serviceberry</span>
+    </a>
+    <p class="mark-tag">Strategic community engagement</p>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="herowrap">
+    <section class="shell-wide hero">
+      <div class="hero-grid">
+        <h1>
+          You can do good business.
+          <span>And do good.</span>
+        </h1>
+        <img class="botanical" src="botanical-left.png" alt="" aria-hidden="true" width="951" height="1357">
+        <div class="hero-rule"></div>
+        <div class="hero-foot">
+          <p class="hero-lede">
+            Serviceberry helps companies build community engagement into the way they do
+            business. We develop the strategy, build the partnerships, manage the work,
+            and measure the impact so your company can create meaningful change in the
+            community while creating value for your business.
+          </p>
+          <a class="btn btn-big" href="#contact">Inquire</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="shell three">
+    <div class="section-head">
+      <h2>Where this starts</h2>
+      <span class="line"></span>
+    </div>
+    <div class="cards">
+
+      <article class="card">
+        <h3 class="card-step"><span class="pip"></span>01 &middot; The opportunity</h3>
+        <p>
+          Companies want to be involved in their communities, but the work often happens
+          in pieces. A donation here, a volunteer day there, without a clear plan for how
+          it all fits together.
+        </p>
+        <p>
+          Serviceberry creates work that matters to the community and brings value back
+          to the company.
+        </p>
+        <details>
+          <summary>Why it matters</summary>
+          <div class="more">
+            <p>
+              Good community engagement can strengthen relationships, give employees
+              something meaningful to be part of, and build a stronger reputation in the
+              community.
+            </p>
+          </div>
+        </details>
+      </article>
+
+      <article class="card">
+        <h3 class="card-step"><span class="pip"></span>02 &middot; The approach</h3>
+        <p>
+          Serviceberry works with your leadership team to understand what matters to your
+          company, where you can make a genuine contribution, and what you want the work
+          to accomplish.
+        </p>
+        <p>
+          I build the strategy, connect you with the right community partners, and manage
+          the program from planning through execution.
+        </p>
+        <details>
+          <summary>How it works</summary>
+          <div class="more">
+            <p>
+              A year-long program built around your company, with service projects,
+              community partnerships, storytelling, and support along the way.
+            </p>
+          </div>
+        </details>
+      </article>
+
+      <article class="card">
+        <h3 class="card-step"><span class="pip"></span>03 &middot; The impact</h3>
+        <p>
+          Community engagement should create more than a good afternoon. Throughout the
+          year, Serviceberry tracks participation and impact, captures the stories behind
+          the work, and helps your company put them to use.
+        </p>
+        <p>
+          You get a clear picture of what your investment accomplished and a better way
+          to share it.
+        </p>
+        <details>
+          <summary>What you get</summary>
+          <div class="more">
+            <p>
+              You get a community engagement program built around your company, with
+              meaningful opportunities for your employees to serve, strong community
+              partnerships, and a clear way to measure the impact.
+            </p>
+            <p>
+              Over time, that work can strengthen your culture, create genuine marketing
+              opportunities, deepen your reputation in the community, and give your team
+              stories worth sharing.
+            </p>
+          </div>
+        </details>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="anchor" id="book">
+    <div class="shell">
+      <div class="rule"></div>
+      <h2>Strategic Impact. Measurable Returns.</h2>
+      <a class="btn btn-big btn-light" href="#contact">Inquire</a>
+    </div>
+  </section>
+
+
+  <section class="shell bio" id="about">
+    <div class="bio-in">
+      <div class="portrait-frame">
+        <img class="portrait" src="eliza-rhodes.jpg" alt="Eliza Rhodes" width="800" height="800" loading="lazy">
+        <h3>Eliza Rhodes</h3>
+        <p class="role">Founder</p>
+      </div>
+      <div>
+        <p>
+          My career has taken me through marketing, events, community initiatives, and
+          large-scale service projects. I’ve led marketing teams, produced more than 25
+          major events, and managed a 400-person service project at the 2026 G20
+          Interfaith Forum.
+        </p>
+        <p>
+          My interest in this work started early with Eliza’s Hearts 4 Haiti, a
+          charitable project I have worked on for 20 years that has raised more than
+          $40,000 for healthcare access in Haiti. These experiences have shaped the way I see
+          the role businesses can play in their communities. Companies have people,
+          resources, and reach that can create real impact when they are put to work
+          intentionally.
+        </p>
+        <p>
+          That’s what led me to Serviceberry. I help companies figure out where they can
+          make a real difference, build the right partnerships, and turn good intentions
+          into work that benefits both the community and the business.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="shell inquire" id="contact">
+    <p class="eyebrow"><span class="pip"></span>Start here</p>
+    <div class="inquire-head">
+      <h2>Tell me about your company.</h2>
+    </div>
+
+    <form class="form" id="inquiry">
+      <input type="hidden" name="access_key" value="9f0efb07-22e8-4f30-b8b7-361d3c289ed6">
+      <input type="hidden" name="subject" value="New Serviceberry inquiry">
+      <input type="hidden" name="from_name" value="Serviceberry website">
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <div class="row2">
+        <label>Name
+          <input type="text" name="name" required autocomplete="name">
+        </label>
+        <label>Work email
+          <input type="email" name="email" required autocomplete="email">
+        </label>
+      </div>
+
+      <div class="row2">
+        <label>Company
+          <input type="text" name="company" required autocomplete="organization">
+        </label>
+        <label>Roughly how many people work there
+          <select name="headcount">
+            <option value="">Select one</option>
+            <option>Under 100</option>
+            <option>100 to 250</option>
+            <option>250 to 500</option>
+            <option>500 to 1,000</option>
+            <option>More than 1,000</option>
+          </select>
+        </label>
+      </div>
+
+      <label>What prompted you to reach out
+        <textarea name="message" rows="4"></textarea>
+      </label>
+
+      <button class="btn btn-big" type="submit">Send</button>
+      <p class="form-note" id="formnote" hidden></p>
+    </form>
+  </section>
+
+  <footer class="shell foot">
+    <div class="foot-in">
+      <a href="mailto:hello@serviceberrystrategies.com?subject=Serviceberry%20inquiry">hello@serviceberrystrategies.com</a>
+      <span>Serviceberry Strategies LLC &middot; Salt Lake City, Utah</span>
+    </div>
+    <p class="note">
+      &copy; 2026 Serviceberry Strategies LLC.
+    </p>
+  </footer>
+</main>
+
+<script>
+(function(){
+  var f=document.getElementById('inquiry'),note=document.getElementById('formnote');
+  if(!f) return;
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var btn=f.querySelector('button[type=submit]');
+    btn.disabled=true; btn.textContent='Sending'; note.hidden=true;
+    fetch('https://api.web3forms.com/submit',{
+      method:'POST',
+      headers:{'Content-Type':'application/json',Accept:'application/json'},
+      body:JSON.stringify(Object.fromEntries(new FormData(f)))
+    }).then(function(r){return r.json();}).then(function(d){
+      if(!d.success) throw new Error(d.message||'failed');
+      f.reset();
+      note.className='form-note';
+      note.textContent='Thank you. Expect a response in 1-2 business days.';
+    }).catch(function(){
+      note.className='form-note bad';
+      note.textContent='Something went wrong sending that. Please email hello@serviceberrystrategies.com directly and I will pick it up there.';
+    }).then(function(){
+      note.hidden=false; btn.disabled=false; btn.textContent='Send';
+    });
+  });
+})();
+</script>
+</body>
+</html>
