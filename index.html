@@ -76,8 +76,8 @@ p{margin:0} a{color:inherit}
   min-height:calc(100vh - var(--nav-h));
   min-height:calc(100svh - var(--nav-h))}
 .hero > .shell{width:100%}
-.hero h1{font-size:clamp(30px,4.5vw,58px);font-weight:900;margin:0 auto;
-  max-width:min(100%,1240px)}
+.hero h1{font-size:clamp(32px,4.6vw,62px);font-weight:900;margin:0 auto;
+  max-width:min(100%,1260px)}
 
 /* the line that swaps, in the manner of shopify.com */
 .swap{display:block;position:relative;height:1.2em;overflow:hidden;margin-top:.12em}
@@ -86,13 +86,14 @@ p{margin:0} a{color:inherit}
   transition:transform .6s cubic-bezier(.22,.9,.24,1),opacity .34s ease}
 .swap b.is-in{transform:translate(-50%,0);opacity:1}
 .swap b.is-out{transform:translate(-50%,-112%);opacity:0}
-@media(max-width:700px){.swap b{white-space:normal;width:94vw}
+@media(max-width:700px){.swap b{white-space:normal;width:100%}
   .swap{height:2.5em}}
 @media (prefers-reduced-motion:reduce){.swap b{transition:opacity .25s ease;
   transform:translate(-50%,0)}
   .swap b.is-out{transform:translate(-50%,0)}}
-.hero p{max-width:62ch;margin:22px auto 0;font-size:clamp(16px,1.3vw,18.5px);color:#EDE8DB}
-.hero .pill{margin-top:30px}
+.hero p{max-width:62ch;margin:clamp(30px,4vw,58px) auto 0;
+  font-size:clamp(16.5px,1.38vw,19.5px);color:#EDE8DB}
+.hero .pill{margin-top:clamp(32px,3.8vw,50px)}
 
 /* alternating split rows */
 .rows{display:grid;gap:var(--gap);margin-top:var(--gap)}
