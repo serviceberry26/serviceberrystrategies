@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Serviceberry | Strategic community engagement for Utah companies</title>
+<meta name="description" content="Serviceberry builds and runs strategic community engagement programs for companies along the Wasatch Front. We develop the strategy, build the partnerships, manage the work, and measure the impact.">
+
+<link rel="canonical" href="https://serviceberrystrategies.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://serviceberrystrategies.com/">
+<meta property="og:title" content="Serviceberry">
+<meta property="og:description" content="Serviceberry builds and runs strategic community engagement programs for companies along the Wasatch Front. We develop the strategy, build the partnerships, manage the work, and measure the impact.">
+<meta property="og:site_name" content="Serviceberry">
+<meta property="og:image" content="https://serviceberrystrategies.com/serviceberry-mark.png">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="serviceberry-mark.png">
+<link rel="apple-touch-icon" href="serviceberry-mark.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap">
+</head>
+<body>
+<style>
+:root{
+  --berry:#431B11; --sage:#A9A99C; --olive:#665E41; --cream:#F7F5ED;
+  --ink:#241A14; --ink-soft:#4A413A; --ink-faint:#7C7367;
+  --rule:#E2E0D6;
+  --sans:"Lato","Helvetica Neue",Arial,sans-serif;
+  --gut:clamp(18px,4vw,48px);
+  --shell:1360px;
+  --gap:14px;
+  --logo-h:36px;        /* logo height, placeholder or final */
+  --nav-h:77px;         /* header height, so the hero can fill the rest */
+}
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:var(--ink);font-family:var(--sans);
+  font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{margin:0;font-family:var(--sans);font-weight:700;line-height:1.18;
+  letter-spacing:-0.012em}
+p{margin:0} a{color:inherit}
+:focus-visible{outline:3px solid var(--berry);outline-offset:3px}
+.shell{max-width:var(--shell);margin:0 auto;padding-inline:var(--gut)}
+
+/* pill buttons */
+.pill{display:inline-flex;align-items:center;justify-content:center;
+  font-size:15px;font-weight:700;letter-spacing:.01em;text-decoration:none;
+  padding:11px 26px;border-radius:999px;border:1px solid transparent;cursor:pointer;
+  transition:background .18s ease,color .18s ease,border-color .18s ease}
+.pill-dark{background:var(--berry);color:var(--cream);border-color:var(--berry)}
+.pill-dark:hover{background:#5C291C;border-color:#5C291C}
+.pill-ghost{background:transparent;color:var(--cream);border-color:var(--cream)}
+.pill-ghost:hover{background:var(--cream);color:var(--berry)}
+.pill-line{background:transparent;color:var(--berry);border-color:var(--berry)}
+.pill-line:hover{background:var(--berry);color:var(--cream)}
+.pill-lg{font-size:16px;padding:14px 34px}
+
+/* nav */
+.nav{background:#fff;border-bottom:1px solid var(--rule);position:sticky;top:0;z-index:30}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:24px;
+  min-height:76px;padding-block:12px;flex-wrap:wrap}
+/* one number controls the logo, placeholder or final */
+.mark{display:inline-flex;align-items:center;text-decoration:none;color:var(--ink)}
+.mark-logo{height:var(--logo-h);width:auto;display:block}
+.mark-word{font-size:calc(var(--logo-h) * .62);font-weight:900;letter-spacing:.15em;
+  text-transform:uppercase;line-height:1;color:var(--ink)}
+
+/* hero */
+/* the hero fills the first screen on its own */
+.hero{background:var(--olive);color:var(--cream);text-align:center;
+  padding-block:clamp(52px,6.4vw,84px);
+  display:flex;align-items:center;
+  min-height:calc(100vh - var(--nav-h));
+  min-height:calc(100svh - var(--nav-h))}
+.hero > .shell{width:100%}
+.hero h1{font-size:clamp(32px,4.6vw,62px);font-weight:900;margin:0 auto;
+  max-width:min(100%,1260px)}
+
+/* the line that swaps, in the manner of shopify.com */
+.swap{display:block;position:relative;height:1.2em;overflow:hidden;margin-top:.12em}
+.swap b{position:absolute;left:50%;top:0;white-space:nowrap;font-weight:900;
+  color:#D8CDB4;transform:translate(-50%,112%);opacity:0;
+  transition:transform .6s cubic-bezier(.22,.9,.24,1),opacity .34s ease}
+.swap b.is-in{transform:translate(-50%,0);opacity:1}
+.swap b.is-out{transform:translate(-50%,-112%);opacity:0}
+@media(max-width:700px){.swap b{white-space:normal;width:100%}
+  .swap{height:2.5em}}
+@media (prefers-reduced-motion:reduce){.swap b{transition:opacity .25s ease;
+  transform:translate(-50%,0)}
+  .swap b.is-out{transform:translate(-50%,0)}}
+.hero p{max-width:62ch;margin:clamp(30px,4vw,58px) auto 0;
+  font-size:clamp(16.5px,1.38vw,19.5px);color:#EDE8DB}
+.hero .pill{margin-top:clamp(32px,3.8vw,50px)}
+
+/* alternating split rows */
+.rows{display:grid;gap:var(--gap);margin-top:var(--gap)}
+.split{display:grid;grid-template-columns:1fr 1fr;min-height:430px}
+@media(max-width:860px){.split{grid-template-columns:1fr}
+  /* stacked, the number always leads the panel it belongs to */
+  .split .tile{order:-1}}
+.panel{display:flex;flex-direction:column;justify-content:center;align-items:center;
+  text-align:center;padding:clamp(40px,5vw,70px) clamp(24px,4vw,56px)}
+.panel-olive{background:var(--olive);color:var(--cream)}
+.panel-berry{background:var(--berry);color:var(--cream)}
+.panel-in{max-width:46ch}
+.kicker{font-size:12px;font-weight:900;letter-spacing:.22em;text-transform:uppercase;
+  color:#D8CDB4;margin-bottom:16px}
+.panel .kicker{font-size:clamp(15px,1.5vw,19px);letter-spacing:.17em;margin-bottom:24px}
+.panel-berry .kicker{color:#D7B9A6}
+.panel p{font-size:16.5px;color:#EFEADD}
+.panel p+p{margin-top:14px}
+
+/* numeral tiles stand in for photography */
+.tile{background:var(--sage);display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;min-height:430px}
+.tile .num{font-size:clamp(130px,17vw,250px);font-weight:900;line-height:.8;
+  color:var(--berry);opacity:.9;letter-spacing:-0.04em}
+.tile .mark-watermark{position:absolute;right:-26px;bottom:-26px;width:190px;opacity:.22}
+.tile-cream{background:#E4E1D4}
+@media(max-width:860px){.tile{min-height:220px}.tile .num{font-size:120px}}
+
+/* disclosure inside a panel */
+.panel details{margin-top:24px;width:100%}
+.panel summary{list-style:none;display:inline-flex;align-items:center;justify-content:center;
+  font-size:14px;font-weight:700;padding:10px 24px;border-radius:999px;
+  border:1px solid var(--cream);color:var(--cream);cursor:pointer;
+  transition:background .18s ease,color .18s ease}
+.panel summary::-webkit-details-marker{display:none}
+.panel summary:hover{background:var(--cream);color:var(--berry)}
+.panel details[open] summary{background:var(--cream);color:var(--berry)}
+.panel .more{padding-top:18px;font-size:15.5px;color:#EFEADD}
+.panel .more p+p{margin-top:12px}
+
+/* statement band */
+.band{background:var(--berry);color:var(--cream);text-align:center;
+  padding-block:clamp(66px,8vw,110px);margin-top:var(--gap)}
+.band h2{font-size:clamp(28px,4.4vw,52px);font-weight:900;max-width:18ch;margin:0 auto}
+.band .pill{margin-top:34px}
+
+/* bio */
+.bio{background:var(--olive);color:var(--cream);margin-top:var(--gap);
+  padding-block:clamp(34px,4.2vw,58px)}
+.bio-row{max-width:1140px;margin:0 auto;padding-inline:var(--gut);
+  display:grid;grid-template-columns:clamp(220px,27vw,360px) minmax(0,1fr);
+  gap:clamp(26px,3.6vw,54px);align-items:center}
+@media(max-width:860px){.bio-row{grid-template-columns:1fr;justify-items:center;
+  text-align:center}.bio-photo{max-width:260px}}
+.bio-photo{width:100%}
+.bio-photo img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;
+  display:block;border-radius:16px}
+.bio-text{display:flex;flex-direction:column;justify-content:center}
+.bio-text .name{font-size:clamp(21px,1.9vw,25px);font-weight:900}
+.bio-text .role{font-size:10.5px;font-weight:900;letter-spacing:.22em;text-transform:uppercase;
+  color:#D8CDB4;margin-top:6px;margin-bottom:14px}
+.bio-text p{font-size:15.5px;line-height:1.62;color:#EFEADD}
+.bio-text p+p{margin-top:12px}
+
+/* form */
+.inquire{background:var(--cream);padding-block:clamp(60px,8vw,104px);margin-top:var(--gap)}
+.inquire-head{text-align:center;max-width:36ch;margin:0 auto clamp(34px,4vw,48px)}
+.inquire-head .kicker{color:var(--olive)}
+.inquire-head h2{font-size:clamp(28px,3.6vw,44px);font-weight:900}
+.form{max-width:720px;margin:0 auto;display:grid;gap:18px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:620px){.row2{grid-template-columns:1fr}}
+.form label{display:block;font-size:12.5px;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink-faint)}
+.form input,.form select,.form textarea{display:block;width:100%;margin-top:8px;
+  font-family:var(--sans);font-size:16px;color:var(--ink);background:#fff;
+  border:1px solid var(--rule);border-radius:14px;padding:14px 16px;
+  transition:border-color .18s ease,box-shadow .18s ease}
+.form textarea{resize:vertical;min-height:130px;line-height:1.6}
+.form input:focus,.form select:focus,.form textarea:focus{outline:none;
+  border-color:var(--olive);box-shadow:0 0 0 3px rgba(102,94,65,.16)}
+.form select{appearance:none;cursor:pointer;
+  background-image:linear-gradient(45deg,transparent 49%,var(--ink-faint) 50%),
+                   linear-gradient(-45deg,transparent 49%,var(--ink-faint) 50%);
+  background-size:6px 6px,6px 6px;background-repeat:no-repeat;
+  background-position:calc(100% - 22px) 24px,calc(100% - 16px) 24px}
+.form button{justify-self:center;margin-top:6px}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.form-note{font-size:15px;line-height:1.55;padding:14px 18px;border-radius:14px;
+  background:#fff;border:1px solid var(--rule)}
+.form-note.bad{border-color:#C08C7A}
+
+/* footnote + footer */
+.footnote{text-align:center;font-size:13.5px;color:var(--ink-faint);
+  max-width:74ch;margin:0 auto;padding:clamp(34px,5vw,56px) var(--gut)}
+.foot{border-top:1px solid var(--rule);padding-block:44px 52px}
+.foot-cols{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:26px}
+@media(max-width:780px){.foot-cols{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.foot h4{font-size:13px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;
+  margin-bottom:12px}
+.foot a,.foot span{display:block;font-size:14.5px;color:var(--ink-soft);
+  text-decoration:none;margin-bottom:7px}
+.foot a:hover{color:var(--olive);text-decoration:underline}
+.foot-base{margin-top:38px;padding-top:22px;border-top:1px solid var(--rule);
+  display:flex;flex-wrap:wrap;gap:10px 26px;justify-content:space-between;
+  font-size:13px;color:var(--ink-faint)}
+</style>
+
+
+<header class="nav">
+  <div class="shell nav-in">
+    <!-- ===================== LOGO SLOT =====================
+         Placeholder. The wordmark below is live text, not the real
+         logo, because the icon and the wordmark type are not final.
+
+         WHEN THE FINAL LOGO ARRIVES, this is the whole job:
+           1. save the artwork in this folder as  logo.svg  (or logo.png,
+              ideally about 3x the display height for sharp retina)
+           2. delete the <span class="mark-word"> line below and put this
+              in its place:
+                   <img class="mark-logo" src="logo.svg" alt="Serviceberry">
+           3. save the icon on its own as  serviceberry-mark.png  (512px
+              square) for the browser tab
+           4. if the icon should also sit faintly behind the big numbers,
+              see the MARK SLOT note further down
+
+         Size is controlled in one place: --logo-h in the stylesheet.
+         Nothing else on the page needs to change.
+    ====================================================== -->
+    <a class="mark" href="#top" aria-label="Serviceberry">
+      <span class="mark-word">Serviceberry</span>
+    </a>
+    <a class="pill pill-dark" href="#contact">Inquire</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="shell">
+      <h1>
+        Strategic community engagement
+        <span class="swap" id="swap" aria-live="polite">
+          <b class="is-in">improves internal culture.</b>
+          <b>delivers measurable returns.</b>
+          <b>creates marketing opportunities.</b>
+          <b>deepens community relationships.</b>
+          <b>gives your team stories worth sharing.</b>
+        </span>
+      </h1>
+      <p>
+        Serviceberry helps companies build community engagement into the way they do
+        business. We develop the strategy, build the partnerships, manage the work, and
+        measure the impact so your company can create meaningful change in the community
+        while creating value for your business.
+      </p>
+      <a class="pill pill-ghost pill-lg" href="#contact">Inquire</a>
+    </div>
+  </section>
+
+  <div class="rows">
+
+    <section class="split" id="opportunity">
+      <div class="tile">
+        <span class="num">01</span>
+        <!-- MARK SLOT: once the icon is final, drop it back in here as
+             <img class="mark-watermark" src="serviceberry-mark.png" alt="" aria-hidden="true"> -->
+      </div>
+      <div class="panel panel-olive">
+        <div class="panel-in">
+          <p class="kicker">The opportunity</p>
+          <p>
+            Companies want to be involved in their communities, but the work often happens
+            in pieces. A donation here, a volunteer day there, without a clear plan for how
+            it all fits together.
+          </p>
+          <p>
+            Serviceberry creates work that matters to the community and brings value back
+            to the company.
+          </p>
+          <details>
+            <summary>Why it matters</summary>
+            <div class="more">
+              <p>
+                Good community engagement can strengthen relationships, give employees
+                something meaningful to be part of, and build a stronger reputation in the
+                community.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="split" id="approach">
+      <div class="panel panel-berry">
+        <div class="panel-in">
+          <p class="kicker">The approach</p>
+          <p>
+            Serviceberry works with your leadership team to understand what matters to your
+            company, where you can make a genuine contribution, and what you want the work
+            to accomplish.
+          </p>
+          <p>
+            I build the strategy, connect you with the right community partners, and manage
+            the program from planning through execution.
+          </p>
+          <details>
+            <summary>How it works</summary>
+            <div class="more">
+              <p>
+                A year-long program built around your company, with service projects,
+                community partnerships, storytelling, and support along the way.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+      <div class="tile tile-cream">
+        <span class="num">02</span>
+        <!-- MARK SLOT: once the icon is final, drop it back in here as
+             <img class="mark-watermark" src="serviceberry-mark.png" alt="" aria-hidden="true"> -->
+      </div>
+    </section>
+
+    <section class="split" id="impact">
+      <div class="tile">
+        <span class="num">03</span>
+        <!-- MARK SLOT: once the icon is final, drop it back in here as
+             <img class="mark-watermark" src="serviceberry-mark.png" alt="" aria-hidden="true"> -->
+      </div>
+      <div class="panel panel-olive">
+        <div class="panel-in">
+          <p class="kicker">The impact</p>
+          <p>
+            Community engagement should create more than a good afternoon. Throughout the
+            year, Serviceberry tracks participation and impact, captures the stories behind
+            the work, and helps your company put them to use.
+          </p>
+          <p>
+            You get a clear picture of what your investment accomplished and a better way
+            to share it.
+          </p>
+          <details>
+            <summary>What you get</summary>
+            <div class="more">
+              <p>
+                You get a community engagement program built around your company, with
+                meaningful opportunities for your employees to serve, strong community
+                partnerships, and a clear way to measure the impact.
+              </p>
+              <p>
+                Over time, that work can strengthen your culture, create genuine marketing
+                opportunities, deepen your reputation in the community, and give your team
+                stories worth sharing.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <section class="band">
+    <div class="shell">
+      <h2>Strategic Impact. Measurable Returns.</h2>
+      <a class="pill pill-ghost pill-lg" href="#contact">Inquire</a>
+    </div>
+  </section>
+
+  <section class="bio" id="about">
+    <div class="bio-row">
+    <div class="bio-photo">
+      <img src="eliza-rhodes.jpg" width="800" height="800" alt="Eliza Rhodes" loading="lazy">
+    </div>
+    <div class="bio-text">
+      <p class="name">Eliza Rhodes</p>
+      <p class="role">Founder</p>
+      <p>
+        My career has taken me through marketing, events, community initiatives, and
+        large-scale service projects. I&rsquo;ve led marketing teams, produced more than 25
+        major events, and managed a 400-person service project at the 2026 G20 Interfaith
+        Forum.
+      </p>
+      <p>
+        My interest in this work started early with Eliza&rsquo;s Hearts 4 Haiti, a charitable
+        project I have worked on for 20 years that has raised more than $40,000 for
+        healthcare access in Haiti. These experiences have shaped the way I see the role
+        businesses can play in their communities. Companies have people, resources, and
+        reach that can create real impact when they are put to work intentionally.
+      </p>
+      <p>
+        That&rsquo;s what led me to Serviceberry. I help companies figure out where they can
+        make a real difference, build the right partnerships, and turn good intentions
+        into work that benefits both the community and the business.
+      </p>
+    </div>
+    </div>
+  </section>
+
+  <section class="inquire" id="contact">
+    <div class="shell">
+      <div class="inquire-head">
+        <p class="kicker">Start here</p>
+        <h2>Tell me about your company.</h2>
+      </div>
+      <form class="form" id="inquiry">
+        <input type="hidden" name="access_key" value="9f0efb07-22e8-4f30-b8b7-361d3c289ed6">
+        <input type="hidden" name="subject" value="New Serviceberry inquiry">
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" aria-hidden="true">
+        <div class="row2">
+          <label>Name
+            <input type="text" name="name" required autocomplete="name">
+          </label>
+          <label>Work email
+            <input type="email" name="email" required autocomplete="email">
+          </label>
+        </div>
+        <div class="row2">
+          <label>Company
+            <input type="text" name="company" required autocomplete="organization">
+          </label>
+          <label>Roughly how many people work there
+            <select name="headcount">
+              <option value="">Select one</option>
+              <option>Under 100</option><option>100 to 250</option>
+              <option>250 to 500</option><option>500 to 1,000</option>
+              <option>More than 1,000</option>
+            </select>
+          </label>
+        </div>
+        <label>What prompted you to reach out
+          <textarea name="message" rows="4"></textarea>
+        </label>
+        <button class="pill pill-dark pill-lg" type="submit">Send</button>
+        <p class="form-note" id="formnote" hidden></p>
+      </form>
+    </div>
+  </section>
+
+  <p class="footnote">
+    Serviceberry builds and runs community engagement programs for companies along the
+    Wasatch Front. Every program is built around the company it belongs to.
+  </p>
+
+  <footer class="foot">
+    <div class="shell">
+      <div class="foot-cols">
+        <div>
+          <h4>What we do</h4>
+          <a href="#opportunity">The opportunity</a>
+          <a href="#approach">The approach</a>
+          <a href="#impact">The impact</a>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <a href="#about">About Eliza</a>
+          <a href="#contact">Inquire</a>
+        </div>
+        <div>
+          <h4>Get in touch</h4>
+          <a href="mailto:hello@serviceberrystrategies.com">hello@serviceberrystrategies.com</a>
+          <span>Salt Lake City, Utah</span>
+        </div>
+        <div>
+          <h4>Serviceberry</h4>
+          <span>Serviceberry Strategies LLC</span>
+          <span>Serving the Wasatch Front</span>
+        </div>
+      </div>
+      <div class="foot-base">
+        <span>&copy; 2026 Serviceberry Strategies LLC.</span>
+        <span>Strategic community engagement</span>
+      </div>
+    </div>
+  </footer>
+
+</main>
+
+<script>
+(function(){
+  var box=document.getElementById('swap');
+  if(!box) return;
+  var words=Array.prototype.slice.call(box.querySelectorAll('b'));
+  if(words.length<2) return;
+  var i=0, HOLD=3400;
+  function step(){
+    var cur=words[i], nxt=words[(i+1)%words.length];
+    cur.classList.remove('is-in'); cur.classList.add('is-out');
+    nxt.classList.remove('is-out'); nxt.classList.add('is-in');
+    window.setTimeout(function(){cur.classList.remove('is-out');},700);
+    i=(i+1)%words.length;
+  }
+  var timer=window.setInterval(step,HOLD);
+  document.addEventListener('visibilitychange',function(){
+    if(document.hidden){window.clearInterval(timer);}
+    else{timer=window.setInterval(step,HOLD);}
+  });
+})();
+</script>
+
+<script>
+(function(){
+  var f=document.getElementById('inquiry'),note=document.getElementById('formnote');
+  if(!f) return;
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var btn=f.querySelector('button[type=submit]');
+    btn.disabled=true; btn.textContent='Sending'; note.hidden=true;
+    fetch('https://api.web3forms.com/submit',{
+      method:'POST',
+      headers:{'Content-Type':'application/json',Accept:'application/json'},
+      body:JSON.stringify(Object.fromEntries(new FormData(f)))
+    }).then(function(r){return r.json();}).then(function(d){
+      if(!d.success) throw new Error(d.message||'failed');
+      f.reset();
+      note.className='form-note';
+      note.textContent='Thank you. Expect a response in 1-2 business days.';
+    }).catch(function(){
+      note.className='form-note bad';
+      note.textContent='Something went wrong sending that. Please email hello@serviceberrystrategies.com directly and I will pick it up there.';
+    }).then(function(){
+      note.hidden=false; btn.disabled=false; btn.textContent='Send';
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
